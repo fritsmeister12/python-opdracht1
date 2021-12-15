@@ -9,16 +9,21 @@ print('Bij online bestellen is het tarief voor volwassenen €35 en voor kindere
 print('Indien je een kortingspas hebt is het tarief voor volwassenen €30 en voor kinderen €25. Het tarief met een kortingspas geldt zowel bij aankoop ter plekke als online.\n')
 
 # Dan wordt er gevraag of de kaarten online zijn besteld
-while True: 
-    kaartenOnline = input('Zijn de kaarten online gekocht? (J/n) : ') 
-    if kaartenOnline == '' or not kaartenOnline[0].lower() in ['j','n']:print('Antwoord alsjeblieft met ja of nee!') 
-    else:break 
+while True:
+    kaartenOnline = input('Zijn de kaarten online gekocht? (J/n) : ')
+    if kaartenOnline == '' or not kaartenOnline[0].lower() in ['j', 'n']:
+        print('Antwoord alsjeblieft met ja of nee!')
+    else:
+        break
 
 # Er wordt gevraagd of er gebruik gemaakt is van een kortingspas
-while True: 
-    metKortingspas = input('\nIs er gebruik gemaakt van een kortingspas? (J/n) : ') 
-    if metKortingspas == '' or not metKortingspas[0].lower() in ['j','n']:print('Antwoord alsjeblieft met ja of nee!') 
-    else:break 
+while True:
+    metKortingspas = input(
+        '\nIs er gebruik gemaakt van een kortingspas? (J/n) : ')
+    if metKortingspas == '' or not metKortingspas[0].lower() in ['j', 'n']:
+        print('Antwoord alsjeblieft met ja of nee!')
+    else:
+        break
 
 # Er wordt gevraagd om hoeveel personen het gaat
 aantalVolwassenen = int(input('\nOm hoeveel volwassenen gaat het? : '))
@@ -32,7 +37,7 @@ if kaartenOnline[0].lower() == 'j':
     # Als dit het geval is worden de prijzen aangepast naar 30 en 25 en wordt het totaal berekend
     if metKortingspas[0].lower() == 'j':
         totalePrijs = (aantalVolwassenen * 30) + (aantalKinderen * 25)
-        # 
+        #
         print('------------------------------------------------------')
         print('Online gekocht met kortingspas:', totalePrijs)
     # Als er geen kortingspas aanwezig is worden de prijzen aangepast naar 35 en 28.50 en het totaal berekend
@@ -40,7 +45,9 @@ if kaartenOnline[0].lower() == 'j':
         totalePrijs = (aantalVolwassenen * 35) + (aantalKinderen * 28.50)
         print('------------------------------------------------------')
         print('Online gekocht:', totalePrijs)
-    else:pass
+    else:
+        pass
+    # dsvsddvsdvds
 elif kaartenOnline[0].lower() == 'n':
     if metKortingspas[0].lower() == 'j':
         totalePrijs = (aantalVolwassenen * 30) + (aantalKinderen * 25)
@@ -50,6 +57,7 @@ elif kaartenOnline[0].lower() == 'n':
         totalePrijs = (aantalVolwassenen * 37.50) + (aantalKinderen * 35)
         print('------------------------------------------------------')
         print('Ter plekke gekocht:', totalePrijs)
-    else:pass
+    else:
+        pass
 else:
     print('Er gaat iets fout')
